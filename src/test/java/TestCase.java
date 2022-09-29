@@ -98,11 +98,13 @@ public class TestCase extends TestBase {
                 sendKeys(faker.address().fullAddress() + Keys.PAGE_DOWN);
 
         // Kullanıcı "Kaydet" butonuna tıklar.
-        driver.findElement(By.xpath("//button[@class='button green js-set-country js-prevent-emoji']")).click();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//button[@class='button green address-modal-submit-button js-set-country js-prevent-emoji js-address-form-submit-button']")).click();
+
 
         // Kullanıcı kargo biilgilerini seçer.
-        driver.findElement(By.xpath("(//div[@class='radio'])[4]")).click();
-        Thread.sleep(2000);
+        driver.findElement(By.xpath("(//div[@class='radio'])[3]")).click();
 
         // Kullanıcı adres kaydedildikten sonra kullanıcı "Kaydet ve Devam Et" butonuna tıklar.
         driver.findElement(By.xpath("(//button[@type='submit'])[1]")).click();
