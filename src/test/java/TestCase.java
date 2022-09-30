@@ -83,11 +83,11 @@ public class TestCase extends TestBase {
 
         // Kullanıcı il seçer.
         driver.findElement(By.xpath("//select[@name='city']")).sendKeys("KONYA");
-        Thread.sleep(2000);
+Thread.sleep(100);
 
         // Kullanıcı ilçe seçer.
         driver.findElement(By.xpath("//select[@name='township']")).sendKeys("SELÇUKLU");
-        Thread.sleep(2000);
+Thread.sleep(100);
 
         // Kullanıcı mahalle seçer.
         driver.findElement(By.xpath("//select[@class='js-district']")).
